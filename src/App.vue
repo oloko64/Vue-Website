@@ -1,55 +1,46 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+    <v-app-bar app elevation="0">
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-btn text height="64">
+        <h2>{{ TOP_MENU_DATA.HOME }}</h2>
       </v-btn>
+      <v-spacer></v-spacer>
+      <v-btn text height="64">{{ TOP_MENU_DATA.ABOUT }}</v-btn>
+      <v-btn text height="64">{{ TOP_MENU_DATA.PORTIFOLIO }}</v-btn>
     </v-app-bar>
-
+    <v-navigation-drawer v-model="drawer" absolute temporary>
+      <drawer-menu-items />
+    </v-navigation-drawer>
     <v-main>
-      <router-view/>
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
+import DrawerMenuItems from '@/components/navigation/DrawerMenuItems.vue';
+import { TOP_MENU_DATA } from '@/data/menu/navbar';
 
 export default {
   name: 'App',
+  components: {
+    DrawerMenuItems,
+  },
 
-  data: () => ({
-    //
-  }),
+  data() {
+    return {
+      drawer: false,
+      group: null,
+    };
+  },
+  created() {
+    this.TOP_MENU_DATA = TOP_MENU_DATA;
+  },
+  watch: {
+    group() {
+      this.drawer = false;
+    },
+  },
 };
 </script>
