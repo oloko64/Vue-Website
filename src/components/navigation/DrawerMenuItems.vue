@@ -1,23 +1,24 @@
 <template>
-  <v-list nav>
+  <v-list nav flat>
     <v-list-item-group
       v-model="group"
-      active-class="deep-purple--text text--accent-4"
     >
       <v-list-item>
-        <v-list-item-title>{{ DRAWER_DATA.FOO }}</v-list-item-title>
+        <v-icon>mdi-github</v-icon>
+        <v-list-item-title class="ml-3"> {{ DRAWER_DATA.FIRST }}</v-list-item-title>
       </v-list-item>
 
       <v-list-item>
-        <v-list-item-title>{{ DRAWER_DATA.BAR }}</v-list-item-title>
+        <v-icon>mdi-code-not-equal-variant</v-icon>
+        <v-list-item-title class="ml-3">{{ DRAWER_DATA.SECOND }}</v-list-item-title>
       </v-list-item>
 
       <v-list-item>
-        <v-list-item-title>{{ DRAWER_DATA.FIZZ }}</v-list-item-title>
+        <v-list-item-title>{{ DRAWER_DATA.THIRD }}</v-list-item-title>
       </v-list-item>
 
       <v-list-item>
-        <v-list-item-title>{{ DRAWER_DATA.BUZZ }}</v-list-item-title>
+        <v-list-item-title>{{ DRAWER_DATA.FOURTH }}</v-list-item-title>
       </v-list-item>
     </v-list-item-group>
   </v-list>
