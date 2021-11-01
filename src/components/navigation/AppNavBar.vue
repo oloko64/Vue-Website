@@ -8,6 +8,12 @@
       <v-spacer></v-spacer>
       <v-btn text height="64" @click="handleAbout">{{ TOP_MENU_DATA.ABOUT }}</v-btn>
       <v-btn text height="64">{{ TOP_MENU_DATA.PORTFOLIO }}</v-btn>
+        <v-switch
+          v-model="$vuetify.theme.dark"
+          :prepend-icon="themeIcon"
+          hide-details
+          inset
+        />
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute temporary app>
       <drawer-menu-items />
@@ -37,6 +43,11 @@ export default {
   watch: {
     group() {
       this.drawer = false;
+    },
+  },
+  computed: {
+    themeIcon() {
+      return this.$vuetify.theme.dark ? 'mdi-weather-night' : 'mdi-brightness-6';
     },
   },
   methods: {
