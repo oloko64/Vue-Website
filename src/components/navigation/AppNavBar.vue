@@ -1,11 +1,11 @@
 <template>
   <div>
     <v-app-bar v-resize="onResize" app flat height="64">
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
       <v-btn text height="64" @click="handleHome">
         <h2>{{ TOP_MENU_DATA.HOME }}</h2>
       </v-btn>
-      <v-spacer></v-spacer>
+      <v-spacer/>
       <v-btn text height="64" @click="handleAbout">{{ TOP_MENU_DATA.ABOUT }}</v-btn>
       <v-btn text height="64" v-if="!smallScreen">{{ TOP_MENU_DATA.PORTFOLIO }}</v-btn>
         <v-switch
