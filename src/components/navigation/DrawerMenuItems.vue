@@ -13,12 +13,17 @@
         <v-list-item-title class="ml-3">{{ DRAWER_DATA.SECOND }}</v-list-item-title>
       </v-list-item>
 
-      <v-list-item>
-        <v-list-item-title>{{ DRAWER_DATA.THIRD }}</v-list-item-title>
+      <v-list-item v-if="smallScreen">
+        <v-icon>mdi-information</v-icon>
+        <v-list-item-title class="ml-3">{{ DRAWER_DATA.THIRD }}</v-list-item-title>
       </v-list-item>
 
       <v-list-item>
         <v-list-item-title>{{ DRAWER_DATA.FOURTH }}</v-list-item-title>
+      </v-list-item>
+
+      <v-list-item>
+        <v-list-item-title>{{ DRAWER_DATA.FIFTH }}</v-list-item-title>
       </v-list-item>
     </v-list-item-group>
   </v-list>
@@ -29,7 +34,11 @@ import { DRAWER_DATA } from '@/data/menu/navbar';
 
 export default {
   name: 'DrawerMenuItems',
-
+  props: {
+    smallScreen: {
+      type: Boolean,
+    },
+  },
   data() {
     return {
       group: null,

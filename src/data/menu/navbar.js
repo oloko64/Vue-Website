@@ -7,6 +7,7 @@ export const TOP_MENU_DATA = {
 export const DRAWER_DATA = {
   FIRST: 'GitHub',
   SECOND: 'Source Code',
-  THIRD: 'Fizz',
+  THIRD: 'Portfólio',
   FOURTH: 'Buzz',
+  FIFTH: 'Buzz2',
 };

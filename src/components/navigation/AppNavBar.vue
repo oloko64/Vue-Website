@@ -1,13 +1,13 @@
 <template>
   <div>
-    <v-app-bar app flat height="64">
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    <v-app-bar v-resize="onResize" app flat height="64">
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
       <v-btn text height="64" @click="handleHome">
         <h2>{{ TOP_MENU_DATA.HOME }}</h2>
       </v-btn>
-      <v-spacer></v-spacer>
+      <v-spacer/>
       <v-btn text height="64" @click="handleAbout">{{ TOP_MENU_DATA.ABOUT }}</v-btn>
-      <v-btn text height="64">{{ TOP_MENU_DATA.PORTFOLIO }}</v-btn>
+      <v-btn text height="64" v-if="!smallScreen">{{ TOP_MENU_DATA.PORTFOLIO }}</v-btn>
         <v-switch
           v-model="$vuetify.theme.dark"
           :prepend-icon="themeIcon"
@@ -16,7 +16,7 @@
         />
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute temporary app>
-      <drawer-menu-items />
+      <drawer-menu-items :small-screen="smallScreen" />
     </v-navigation-drawer>
   </div>
 </template>
@@ -24,15 +24,19 @@
 <script>
 import DrawerMenuItems from '@/components/navigation/DrawerMenuItems.vue';
 import { TOP_MENU_DATA } from '@/data/menu/navbar';
+import narrowScreen from '@/helpers/general/screen';
 
 export default {
   name: 'AppNavBar',
   components: {
     DrawerMenuItems,
   },
-
   data() {
     return {
+      windowSize: {
+        x: 0,
+        y: 0,
+      },
       drawer: false,
       group: null,
     };
@@ -40,17 +44,27 @@ export default {
   created() {
     this.TOP_MENU_DATA = TOP_MENU_DATA;
   },
+  mounted() {
+    this.onResize();
+  },
   watch: {
     group() {
       this.drawer = false;
     },
   },
   computed: {
+    smallScreen() {
+      return narrowScreen(this.windowSize);
+    },
     themeIcon() {
       return this.$vuetify.theme.dark ? 'mdi-weather-night' : 'mdi-brightness-6';
     },
   },
   methods: {
+    onResize() {
+      this.$store.dispatch('updateWindowSize', { x: window.innerWidth, y: window.innerHeight });
+      this.windowSize = this.$store.getters.windowsSizeStore;
+    },
     handleAbout() {
       const path = '/about';
       if (this.$route.path !== path) {
