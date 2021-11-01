@@ -5,8 +5,8 @@ export const TOP_MENU_DATA = {
 };
 
 export const DRAWER_DATA = {
-  FOO: 'foo',
-  BAR: 'Bar',
-  FIZZ: 'Fizz',
-  BUZZ: 'Buzz',
+  FIRST: 'GitHub',
+  SECOND: 'Source Code',
+  THIRD: 'Fizz',
+  FOURTH: 'Buzz',
 };
