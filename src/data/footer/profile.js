@@ -1,16 +1,30 @@
-export const SOBRE_USER_DATA = {
-  SOBRE: 'Sobre',
-  DESCRIPTION: 'Gosto muito de programação e estou a procura de aumentar meus conhecimentos em qualquer área relacionada a programação e disposto a novas oportunidades de trabalho.',
+export const ABOUT_USER_DATA = {
+  ABOUT: 'About',
+  DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
 };
 
 export const LINKS_USER_DATA = {
-  LINKS: 'Links',
-  GITHUB: 'GitHub',
-  LINKEDIN: 'Linkedin',
-  LINK_GITHUB: 'https://github.com/OLoKo64',
-  LINK_LINKEDIN: 'https://www.linkedin.com/in/reinaldo-rozato-junior-309ba319a/',
-  FULL_NAME: 'Reinaldo Rozato Junior',
-  EMAIL: 'reinaldorozatoj.11cg1@aleeas.com',
-  ENDERECO: 'Endereço',
-  ENDERECO_LOCATION: 'Araraquara - SP',
+  LINKS_TITLE: 'Links',
+  LINKS_VALUES: [
+    {
+      ICON: 'mdi-github',
+      ICON_SIZE: 36,
+      VALUE: 'https://github.com/',
+      TITLE: 'GitHub',
+    },
+    {
+      ICON: 'mdi-linkedin',
+      ICON_SIZE: 36,
+      VALUE: 'https://www.linkedin.com/',
+      TITLE: 'Linkedin',
+    },
+  ],
+  FULL_NAME: 'Specified Example Name',
+  EMAILS: [
+    {
+      EMAIL: 'example.34@gmail.com',
+    },
+  ],
+  ADDRESS_TITLE: 'Address',
+  ADDRESS_LOCATION: 'Sao Paulo - SP',
 };
