@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app app>
     <app-nav-bar/>
     <v-main>
       <router-view />
@@ -17,6 +17,9 @@ export default {
   components: {
     AppNavBar,
     FooterMain,
+  },
+  beforeMount() {
+    this.$vuetify.theme.dark = true;
   },
 };
 </script>
