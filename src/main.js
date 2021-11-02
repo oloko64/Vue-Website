@@ -4,8 +4,11 @@ import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
 
-Vue.config.productionTip = false;
+// Import global scss
+import '@/colors/global.scss';
+import '@/colors/variables.scss';
 
+Vue.config.productionTip = false;
 new Vue({
   router,
   store,
