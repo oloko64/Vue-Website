@@ -26,5 +26,5 @@ export const LINKS_USER_DATA = {
     },
   ],
   ADDRESS_TITLE: 'Address',
-  ADDRESS_LOCATION: 'Sao Paulo - SP',
+  ADDRESS_LOCATION: 'Lorem ipsum - US',
 };
