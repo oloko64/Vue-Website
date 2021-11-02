@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-app-bar v-resize="onResize" app flat height="64">
+  <div class="app-nav-bar">
+    <v-app-bar v-resize="onResize" height="64" hide-on-scroll flat app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
       <v-btn text height="64" @click="handleHome">
         <h2>{{ TOP_MENU_DATA.HOME }}</h2>
@@ -80,3 +80,7 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.app-nav-bar {}
+</style>
