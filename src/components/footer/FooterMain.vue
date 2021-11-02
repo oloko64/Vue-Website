@@ -1,6 +1,6 @@
 <template>
   <div class="footer-main">
-    <v-footer class="mainFooter" padless>
+    <v-footer class="main-footer pa-10" padless>
       <v-container class="d-flex">
         <v-row no-gutters class="justify-space-around">
           <v-col class="text-center mt-4 my-auto px-4" cols="7">
@@ -40,12 +40,11 @@ export default {
 
 <style lang="scss" scoped>
 .footer-main {
-  .mainFooter {
+  .main-footer {
     font-family: "Roboto", sans-serif;
-    padding: 50px;
   }
 
-  .mainFooter h2 {
+  .main-footer h2 {
     font-weight: normal;
     font-size: 2.5em;
   }
