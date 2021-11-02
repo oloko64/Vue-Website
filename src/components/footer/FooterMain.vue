@@ -9,13 +9,8 @@
           </v-col>
           <v-col cols="auto" class="text-center my-auto px-4">
             <h3 class="grey--text mb-2">{{ LINKS_USER_DATA.LINKS_TITLE }}</h3>
-            <a :href="LINKS_USER_DATA.LINK_GITHUB" target="_blank">{{ LINKS_USER_DATA.GITHUB }}</a>
             <v-spacer/>
-            <div
-              class="mb-2"
-              :key="item.TITLE"
-              v-for="item in LINKS_USER_DATA.LINKS_VALUES"
-            >
+            <div class="mb-2" :key="item.TITLE" v-for="item in LINKS_USER_DATA.LINKS_VALUES">
               <a :href="item.VALUE" target="_blank">
                 <v-icon :size="item.ICON_SIZE">{{ item.ICON }}</v-icon>
                 {{ item.TITLE }}
