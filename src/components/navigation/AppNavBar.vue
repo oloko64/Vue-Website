@@ -17,6 +17,7 @@
         :class="darkColorHover"
         height="64"
         text
+        @click="handleBook"
         v-if="!smallScreen"
       >
         {{ TOP_MENU_DATA.PORTFOLIO }}
@@ -89,6 +90,12 @@ export default {
     },
     handleHome() {
       const path = '/';
+      if (this.$route.path !== path) {
+        this.$router.push(path);
+      }
+    },
+    handleBook() {
+      const path = '/recommended-books';
       if (this.$route.path !== path) {
         this.$router.push(path);
       }
