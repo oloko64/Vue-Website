@@ -1,7 +1,7 @@
 export const TOP_MENU_DATA = {
   HOME: 'HOME',
   ABOUT: 'SOBRE',
-  PORTFOLIO: 'Portfólio',
+  PORTFOLIO: 'Books',
 };
 
 export const DRAWER_DATA = {
