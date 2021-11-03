@@ -1,162 +1,72 @@
 <template>
   <div class="hello-word">
-    <v-container>
-      <v-row class="text-center">
-        <v-col cols="12">
-          <v-img
-            :src="require('../assets/logo.svg')"
-            class="my-3"
-            contain
-            height="200"
-          />
-        </v-col>
-
-        <v-col class="mb-4">
-          <text-field-custom></text-field-custom>
-          <h1 class="display-2 font-weight-bold mb-3">
-            Welcome to Vuetify
-          </h1>
-
-          <p class="subheading font-weight-regular">
-            For help and collaboration with other Vuetify developers,
-            <br>please join our online
-            <a
-              href="https://community.vuetifyjs.com"
-              target="_blank"
-            >Discord Community</a>
-          </p>
-        </v-col>
-
-        <v-col
-          class="mb-5"
-          cols="12"
-        >
-          <h2 class="headline font-weight-bold mb-3">
-            What's next?
-          </h2>
-
-          <v-row justify="center">
-            <a
-              v-for="(next, i) in whatsNext"
-              :key="i"
-              :href="next.href"
-              class="subheading mx-3"
-              target="_blank"
-            >
-              {{ next.text }}
-            </a>
-          </v-row>
-        </v-col>
-
-        <v-col
-          class="mb-5"
-          cols="12"
-        >
-          <h2 class="headline font-weight-bold mb-3">
-            Important Links
-          </h2>
-
-          <v-row justify="center">
-            <a
-              v-for="(link, i) in importantLinks"
-              :key="i"
-              :href="link.href"
-              class="subheading mx-3"
-              target="_blank"
-            >
-              {{ link.text }}
-            </a>
-          </v-row>
-        </v-col>
-
-        <v-col
-          class="mb-5"
-          cols="12"
-        >
-          <h2 class="headline font-weight-bold mb-3">
-            Ecosystem
-          </h2>
-
-          <v-row justify="center">
-            <a
-              v-for="(eco, i) in ecosystem"
-              :key="i"
-              :href="eco.href"
-              class="subheading mx-3"
-              target="_blank"
-            >
-              {{ eco.text }}
-            </a>
-          </v-row>
-        </v-col>
-      </v-row>
+    <v-container class="mb-10">
+      <v-card
+        :class="isCardDark"
+        elevation="0"
+        class="text-center pa-10 mt-10 card-main__rounded"
+        outlined
+      >
+        <v-row no-gutters class="d-flex justify-center align-center text-center">
+          <v-col cols="auto">
+            <h1>HELLO, WE ARE CURRENT WORKING ON
+              <a href="/#/about">ABOUT SECTION</a>
+            </h1>
+          </v-col>
+          <v-col cols="12" class="d-flex justify-center">
+            <v-img :lazy-src="WorkProgressImg" :src="WorkProgressImg" max-width="200px"></v-img>
+          </v-col>
+          <v-col cols="12" md="8" class="mt-3">
+            <v-progress-linear
+              color="amber"
+              height="25"
+              indeterminate
+            />
+          </v-col>
+        </v-row>
+      </v-card>
     </v-container>
   </div>
 </template>
 
 <script>
-import TextFieldCustom from '@/components/input/TextFieldCustom.vue';
+import WorkProgress from '@/assets/img/work_in_progress.png';
 
 export default {
   name: 'HelloWorld',
   components: {
-    TextFieldCustom,
   },
-  data: () => ({
-    ecosystem: [
-      {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader',
-      },
-      {
-        text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify',
-      },
-      {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify',
-      },
-    ],
-    importantLinks: [
-      {
-        text: 'Documentation',
-        href: 'https://vuetifyjs.com',
-      },
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com',
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify',
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs',
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify',
-      },
-    ],
-    whatsNext: [
-      {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com/components/api-explorer',
-      },
-      {
-        text: 'Select a layout',
-        href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
-      },
-      {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-      },
-    ],
-  }),
+  data() {
+    return {
+      power: 30,
+    };
+  },
+  computed: {
+    isCardDark() {
+      return this.$vuetify.theme.dark ? 'card-main__dark' : 'card-main__light';
+    },
+    WorkProgressImg() {
+      return WorkProgress;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.hello-word {}
+.hello-word {
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+
+  .card-main {
+    &__dark {
+      background-color: $color-dark-transparent !important;
+    }&__light {
+      background-color: $color-light-transparent !important;
+    }
+  }
+  .card-main__rounded {
+    border-radius: $border-radius;
+  }
+}
 </style>
