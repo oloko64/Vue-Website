@@ -1,20 +1,18 @@
 <template>
   <div class="app-nav-bar">
     <v-app-bar v-resize="onResize" height="64" hide-on-scroll flat app>
-      <v-app-bar-nav-icon :class="darkColorHover" @click.stop="drawer = !drawer"/>
-      <v-btn :class="darkColorHover" text height="64" @click="handleHome">
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
+      <v-btn text height="64" @click="handleHome">
         <h2>{{ TOP_MENU_DATA.HOME }}</h2>
       </v-btn>
       <v-spacer/>
       <v-btn
-        :class="darkColorHover"
         text height="64"
         @click="handleAbout"
       >
         {{ TOP_MENU_DATA.ABOUT }}
       </v-btn>
       <v-btn
-        :class="darkColorHover"
         height="64"
         text
         @click="handleBook"
@@ -67,9 +65,6 @@ export default {
     },
   },
   computed: {
-    darkColorHover() {
-      return this.$vuetify.theme.dark ? 'hover-color' : '';
-    },
     smallScreen() {
       return narrowScreen(this.windowSize);
     },
@@ -105,13 +100,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app-nav-bar {
-  .hover-color:hover {
-    color: $color-dark-primary-hover;
-  }
-
-  .hover-color::before {
-    color: $color-dark-primary-hover;
-  }
-}
+.app-nav-bar {}
 </style>

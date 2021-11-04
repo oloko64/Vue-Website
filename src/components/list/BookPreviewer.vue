@@ -1,25 +1,28 @@
 <template>
   <div class="book-previewer">
     <v-card>
-      <v-toolbar
-        flat
+      <v-tabs
+        :vertical="!isSmallScreen"
+        center-active
+        show-arrows
       >
-        <v-toolbar-title>{{ PAGE_TITLE.TEXT }}</v-toolbar-title>
-      </v-toolbar>
-      <v-tabs vertical>
         <!-- Book labels -->
-        <v-tab :key="item.NAME" v-for="item in BOOK">
+        <v-tab
+          class="justify-start tab-name__max-size"
+          :key="item.NAME"
+          v-for="item in BOOK"
+        >
           <v-icon left>
             {{ item.ICON }}
           </v-icon>
-          {{ item.NAME }}
+          {{ maxLengthString(item.NAME) }}
         </v-tab>
 
         <!-- Book details -->
         <v-tab-item :key="item.NAME" v-for="item in BOOK">
           <v-card flat>
-            <v-row no-gutters>
-              <v-col cols="auto">
+            <v-row class="d-flex" no-gutters>
+              <v-col cols="auto" v-if="!isSmallScreen">
                 <v-img
                   class="mt-5"
                   max-width="100px"
@@ -27,10 +30,22 @@
                   :src="item.IMAGE_LOCATION"
                 />
               </v-col>
-              <v-col>
-                <h2 class="ml-4 mt-5">{{ item.RESUME_TITLE }}</h2>
-                <v-card-text>
-                  {{ item.RESUME }}
+              <v-col class="justify-center">
+                <div class="d-flex justify-center" v-if="isSmallScreen">
+                  <v-img
+                    class="mt-5"
+                    max-width="100px"
+                    :lazy-src="item.IMAGE_LOCATION"
+                    :src="item.IMAGE_LOCATION"
+                  />
+                </div>
+                <h2 :class="isSmallScreenTitle" class="mt-5">{{ item.NAME }}</h2>
+                <v-card-text
+                  class="py-3 paragraph-custom"
+                  :key="paragraph.ID"
+                  v-for="paragraph in item.RESUME"
+                >
+                  {{ paragraph.PARAGRAPH }}
                 </v-card-text>
               </v-col>
             </v-row>
@@ -43,12 +58,27 @@
 
 <script>
 import { BOOK, PAGE_TITLE } from '@/data/books/recommendedBooks';
+import narrowScreen from '@/helpers/general/screen';
+import maxLengthString from '@/helpers/general/string';
 
 export default {
   name: 'BookPreviewer',
   created() {
     this.BOOK = BOOK;
     this.PAGE_TITLE = PAGE_TITLE;
+  },
+  computed: {
+    isSmallScreenTitle() {
+      return narrowScreen(this.$store.getters.windowsSizeStore, 800)
+        ? 'text-center'
+        : 'ml-4';
+    },
+    isSmallScreen() {
+      return narrowScreen(this.$store.getters.windowsSizeStore, 800);
+    },
+  },
+  methods: {
+    maxLengthString,
   },
 };
 </script>
@@ -57,6 +87,15 @@ export default {
 .book-previewer {
   .v-image {
     border-radius: 8px;
+  }
+
+  .paragraph-custom {
+    text-indent: 50px;
+    max-width: 800px;
+  }
+
+  .tab-name__max-size {
+    max-width: 300px;
   }
 }
 </style>
