@@ -15,10 +15,18 @@
       <v-btn
         height="64"
         text
-        @click="handleBook"
+        @click="handlePortfolio"
         v-if="!smallScreen"
       >
         {{ TOP_MENU_DATA.PORTFOLIO }}
+      </v-btn>
+      <v-btn
+        height="64"
+        text
+        @click="handleBook"
+        v-if="!smallScreen"
+      >
+        {{ TOP_MENU_DATA.BOOKS }}
       </v-btn>
       <v-switch
         v-model="$vuetify.theme.dark"
@@ -85,6 +93,12 @@ export default {
     },
     handleHome() {
       const path = '/';
+      if (this.$route.path !== path) {
+        this.$router.push(path);
+      }
+    },
+    handlePortfolio() {
+      const path = '/portfolio';
       if (this.$route.path !== path) {
         this.$router.push(path);
       }
