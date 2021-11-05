@@ -1,6 +1,6 @@
 <template>
   <div class="time-line-main">
-    <v-timeline>
+    <v-timeline :dense="$vuetify.breakpoint.smAndDown">
       <v-timeline-item
         v-for="card in CARD_TIMELINE_DATA"
         :key="card.ID"
@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import CardCustom from '../card/CardCustom.vue';
-import { CARD_TIMELINE_DATA } from '../../data/card/cards';
+import CardCustom from '@/components/card/CardCustom.vue';
+import { CARD_TIMELINE_DATA } from '@/data/card/cards';
 
 export default {
   components: {
