@@ -1,6 +1,8 @@
 <template>
   <div class="portfolio">
-    <time-line-main />
+    <v-container>
+      <time-line-main />
+    </v-container>
   </div>
 </template>
 
