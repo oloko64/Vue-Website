@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="portfolio">
     <time-line-main />
   </div>
 </template>
@@ -13,3 +13,7 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.portfolio {}
+</style>
