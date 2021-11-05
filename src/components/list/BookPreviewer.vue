@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import { BOOK, PAGE_TITLE } from '@/data/books/recommendedBooks';
+import { BOOK } from '@/data/books/recommendedBooks';
 import narrowScreen from '@/helpers/general/screen';
 import maxLengthString from '@/helpers/general/string';
 
@@ -65,7 +65,6 @@ export default {
   name: 'BookPreviewer',
   created() {
     this.BOOK = BOOK;
-    this.PAGE_TITLE = PAGE_TITLE;
   },
   computed: {
     isSmallScreenTitle() {

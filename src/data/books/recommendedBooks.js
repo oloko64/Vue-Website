@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/prefer-default-export
 export const BOOK = [
   {
     NAME: 'Pro Git',
@@ -5,15 +6,19 @@ export const BOOK = [
     IMAGE_LOCATION: 'https://olokos-place.netlify.app/static/media/livroGit.647a8a4d.jpg',
     RESUME: [
       {
+        ID: 0,
         PARAGRAPH: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       },
       {
+        ID: 1,
         PARAGRAPH: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       },
       {
+        ID: 2,
         PARAGRAPH: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       },
       {
+        ID: 3,
         PARAGRAPH: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       },
     ],
@@ -92,7 +97,3 @@ export const BOOK = [
     RESUME_TITLE: 'Lorem ipsum dolor',
   },
 ];
-
-export const PAGE_TITLE = {
-  TEXT: 'Recommended Books',
-};
