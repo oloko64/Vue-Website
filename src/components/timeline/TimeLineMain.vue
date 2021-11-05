@@ -1,6 +1,6 @@
 <template>
   <div class="time-line-main">
-    <v-timeline :dense="$vuetify.breakpoint.smAndDown">
+    <v-timeline>
       <v-timeline-item
         v-for="card in CARD_TIMELINE_DATA"
         :key="card.ID"
