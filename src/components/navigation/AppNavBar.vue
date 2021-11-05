@@ -2,20 +2,20 @@
   <div class="app-nav-bar">
     <v-app-bar v-resize="onResize" height="64" hide-on-scroll flat app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
-      <v-btn text height="64" @click="handleHome">
+      <v-btn text height="64" @click.prevent="handleHome">
         <h2>{{ TOP_MENU_DATA.HOME }}</h2>
       </v-btn>
       <v-spacer/>
       <v-btn
         text height="64"
-        @click="handleAbout"
+        @click.prevent="handleAbout"
       >
         {{ TOP_MENU_DATA.ABOUT }}
       </v-btn>
       <v-btn
         height="64"
         text
-        @click="handlePortfolio"
+        @click.prevent="handlePortfolio"
         v-if="!smallScreen"
       >
         {{ TOP_MENU_DATA.PORTFOLIO }}
@@ -23,7 +23,7 @@
       <v-btn
         height="64"
         text
-        @click="handleBook"
+        @click.prevent="handleBook"
         v-if="!smallScreen"
       >
         {{ TOP_MENU_DATA.BOOKS }}
