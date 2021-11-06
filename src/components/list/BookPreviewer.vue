@@ -2,7 +2,7 @@
   <div class="book-previewer">
     <v-card>
       <v-tabs
-        :vertical="!isSmallScreen"
+        :vertical="!$vuetify.breakpoint.smAndDown"
         center-active
         show-arrows
       >
@@ -22,7 +22,7 @@
         <v-tab-item :key="item.NAME" v-for="item in BOOK">
           <v-card flat>
             <v-row class="d-flex" no-gutters>
-              <v-col cols="auto" v-if="!isSmallScreen">
+              <v-col cols="auto" v-if="!$vuetify.breakpoint.smAndDown">
                 <v-img
                   class="mt-5"
                   max-width="100px"
@@ -31,7 +31,7 @@
                 />
               </v-col>
               <v-col class="justify-center">
-                <div class="d-flex justify-center" v-if="isSmallScreen">
+                <div class="d-flex justify-center" v-if="$vuetify.breakpoint.smAndDown">
                   <v-img
                     class="mt-5"
                     max-width="100px"
@@ -58,7 +58,6 @@
 
 <script>
 import { BOOK } from '@/data/books/recommendedBooks';
-import narrowScreen from '@/helpers/general/screen';
 import maxLengthString from '@/helpers/general/string';
 
 export default {
@@ -68,12 +67,9 @@ export default {
   },
   computed: {
     isSmallScreenTitle() {
-      return narrowScreen(this.$store.getters.windowsSizeStore, 800)
+      return this.$vuetify.breakpoint.smAndDown
         ? 'text-center'
         : 'ml-4';
-    },
-    isSmallScreen() {
-      return narrowScreen(this.$store.getters.windowsSizeStore, 800);
     },
   },
   methods: {
