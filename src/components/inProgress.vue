@@ -1,5 +1,5 @@
 <template>
-  <div class="hello-word">
+  <div class="in-progress" v-if="progress">
     <v-container class="mb-10">
       <v-card
         :class="isCardDark"
@@ -33,13 +33,19 @@
 import WorkProgress from '@/assets/img/work_in_progress.png';
 
 export default {
-  name: 'HelloWorld',
+  name: 'inProgress',
   components: {
   },
   data() {
     return {
       power: 30,
     };
+  },
+  props: {
+    progress: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     isCardDark() {
@@ -53,7 +59,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hello-word {
+.in-progress {
   background-position: center center;
   background-size: cover;
   height: 100%;
