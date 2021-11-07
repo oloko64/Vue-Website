@@ -44,7 +44,6 @@ export default {
   props: {
     progress: {
       type: Boolean,
-      default: false,
     },
   },
   computed: {

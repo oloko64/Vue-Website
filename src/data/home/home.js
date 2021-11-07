@@ -1,8 +1,8 @@
 // eslint-disable-next-line import/no-unresolved
-import ImageProfile from '../../assets/img/albert-einstein.jpg';
-import vuejs from '../../assets/img/services/vuejs.png';
-import python from '../../assets/img/services/python.png';
-import php from '../../assets/img/services/php.png';
+import ImageProfile from '@/assets/img/albert-einstein.jpg';
+import vuejs from '@/assets/img/services/vuejs.png';
+import python from '@/assets/img/services/python.png';
+import php from '@/assets/img/services/php.png';
 
 // eslint-disable-next-line import/prefer-default-export
 export const HOME_DATA = {
@@ -13,21 +13,9 @@ export const HOME_DATA = {
     return ImageProfile;
   },
   FIRST_DESCRIPTION: [
-    // eslint-disable-next-line no-multi-str
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur\
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    // eslint-disable-next-line no-multi-str
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur\
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    // eslint-disable-next-line no-multi-str
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur\
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
   ],
   // If you want it to have a second card, answer true, if not, answer false
   SECOND_CARD: true,
@@ -45,20 +33,8 @@ export const HOME_DATA = {
     'PHP',
   ],
   SERVICES_DESCRIPTION: [
-    // eslint-disable-next-line no-multi-str
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur\
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    // eslint-disable-next-line no-multi-str
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur\
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    // eslint-disable-next-line no-multi-str
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur\
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-    sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
   ],
 };
