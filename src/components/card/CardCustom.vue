@@ -7,18 +7,24 @@
           {{ CARD_DATA[this.cardNumber].TITLE }}
         </v-card-title>
       </v-row>
-      <v-card-text class="pb-2 pt-2">{{ CARD_DATA[this.cardNumber].DESCRIPTION }}
-        <v-spacer class="pa-1"/>
-        <a
-          class="text-link__card"
-          v-if="CARD_DATA[this.cardNumber].HREF"
-          :href="CARD_DATA[this.cardNumber].HREF"
-          target="_blank"
-        >
-          {{ CARD_DATA[this.cardNumber].TYPE_LINK }}
-        </a>
-        <v-spacer class="non-link__spacer" v-else/>
+      <v-card-text
+        :key="line.LINE"
+        class="pb-2 pt-2 paragraph-indent"
+        v-for="line in CARD_DATA[this.cardNumber].DESCRIPTION"
+      >
+        {{ line.LINE }}
       </v-card-text>
+        <a
+          :key="link.NAME_LINK"
+          :href="link.HREF"
+          class="text-link__card"
+          target="_blank"
+          v-for="link in CARD_DATA[this.cardNumber].LINK"
+        >
+          {{ link.NAME_LINK }}
+          <br>
+        </a>
+      <v-spacer class="pa-1"/>
     </v-card>
   </div>
 </template>
@@ -52,6 +58,10 @@ export default {
 
   .text-link__card {
     font-size: 16px;
+  }
+
+  .paragraph-indent {
+    text-indent: 50px;
   }
 
   .card-main {
