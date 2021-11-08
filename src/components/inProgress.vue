@@ -42,7 +42,9 @@ export default {
     };
   },
   props: {
-    progress: Boolean,
+    progress: {
+      type: Boolean,
+    },
   },
   computed: {
     isCardDark() {
