@@ -4,7 +4,14 @@ export const CARD_DATA = [
     ID: 0,
     ICON: 'mdi-github',
     TITLE: 'FIRST CARD',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    DESCRIPTION: [
+      {
+        LINE: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+      {
+        LINE: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+    ],
     TYPE_LINK: 'GitHub',
     HREF: 'github.com',
   },
@@ -12,71 +19,78 @@ export const CARD_DATA = [
     ID: 1,
     ICON: '',
     TITLE: 'SECOND CARD',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    TYPE_LINK: 'Linkedin',
-    HREF: '',
+    DESCRIPTION: [
+      {
+        LINE: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+    ],
+    // Leave the array bellow empty if you don't want to add any links
+    LINK: [
+      {
+        NAME_LINK: 'GitLab',
+        HREF: '',
+      },
+      {
+        NAME_LINK: 'Linkedin',
+        HREF: '',
+      },
+    ],
   },
   {
     ID: 2,
     ICON: '',
     TITLE: 'THIRD CARD',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    TYPE_LINK: 'Linkedin',
-    HREF: 'linkedin.com',
+    DESCRIPTION: [
+      {
+        LINE: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+      {
+        LINE: 'Lorem sum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+    ],
+    // Leave the array bellow empty if you don't want to add any links
+    LINK: [
+      {
+        NAME_LINK: 'Linkedin',
+        HREF: '',
+      },
+    ],
   },
   {
     ID: 3,
     ICON: 'mdi-linkedin',
     TITLE: 'FOURTH CARD',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    TYPE_LINK: 'Linkedin',
-    HREF: 'linkedin.com',
+    DESCRIPTION: [
+      {
+        LINE: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+    ],
+    // Leave the array bellow empty if you don't want to add any links
+    LINK: [],
   },
   {
     ID: 4,
     ICON: 'mdi-github',
     TITLE: 'FIFTH CARD',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    TYPE_LINK: 'Linkedin',
-    HREF: 'linkedin.com',
-  },
-];
-
-export const CARD_TIMELINE_DATA = [
-  {
-    ID: 0,
-    ICON: 'mdi-github',
-    TITLE: 'FIFTH CARD',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    TYPE_LINK: 'Linkedin',
-    HREF: 'linkedin.com',
-    OPPOSITE_DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-  },
-  {
-    ID: 1,
-    ICON: 'mdi-github',
-    TITLE: 'FIFTH CARD',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    TYPE_LINK: 'Linkedin',
-    HREF: 'linkedin.com',
-    OPPOSITE_DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-  },
-  {
-    ID: 2,
-    ICON: 'mdi-github',
-    TITLE: 'FIFTH CARD',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    TYPE_LINK: 'Linkedin',
-    HREF: 'linkedin.com',
-    OPPOSITE_DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-  },
-  {
-    ID: 3,
-    ICON: 'mdi-github',
-    TITLE: 'FIFTH CARD',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    TYPE_LINK: 'Linkedin',
-    HREF: 'linkedin.com',
-    OPPOSITE_DESCRIPTION: '',
+    DESCRIPTION: [
+      {
+        LINE: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+    ],
+    // Leave the array bellow empty if you don't want to add any links
+    LINK: [
+      {
+        NAME_LINK: 'Linkedin',
+        HREF: '',
+      },
+      {
+        NAME_LINK: 'GitHub',
+        HREF: '',
+      },
+      {
+        NAME_LINK: 'Twitter',
+        HREF: '',
+      },
+    ],
   },
 ];
