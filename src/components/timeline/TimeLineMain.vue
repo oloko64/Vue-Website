@@ -20,7 +20,7 @@
 
 <script>
 import CardCustom from '@/components/card/CardCustom.vue';
-import { CARD_TIMELINE_DATA } from '@/data/card/cards';
+import { CARD_TIMELINE_DATA } from '@/data/card/timeline';
 
 export default {
   components: {
