@@ -1,0 +1,18 @@
+{
+  "mail": [
+    {
+      "id": 1,
+      "name": "Everton",
+      "email": "evertonvanoni1@gmail.com",
+      "title": "First email" ,
+      "msg": "First msg"
+    },
+    {
+      "id": 1,
+      "name": "Everton",
+      "email": "evertonvanoni1@gmail.com",
+      "title": "First email" ,
+      "msg": "First msg"
+    }
+  ]
+}
