@@ -1,0 +1,36 @@
+{
+  "messages": [
+    {
+      "id": 0,
+      "name": "Everton",
+      "message": "Hello, my name is Everton"
+    },
+    {
+      "id": 1,
+      "name": "Reinaldo",
+      "message": "I love cypress tests"
+    },
+    {
+      "name": "Everton",
+      "message": "Tudo de bom",
+      "id": 2
+    },
+    {
+      "name": "dsdasd",
+      "message": "dasdas",
+      "id": 3
+    },
+    {
+      "name": "dasdas",
+      "message": "dasdas",
+      "id": 4
+    }
+  ],
+  "login": [
+    {
+      "id": 0,
+      "email": "everton.vanoni@simbioseventures.com",
+      "password": "everton123456"
+    }
+  ]
+}
