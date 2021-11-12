@@ -78,6 +78,7 @@ export default {
        background-color: $color-light-transparent !important;
     }
   }
+
   .card-main__rounded {
     border-radius: $border-radius;
   }
